@@ -5,12 +5,19 @@ class organization:
     def __init__(self):
         self.workers = []
         self.bio_worker = []
+
+# the following line adds workers to the class object self.workers by appending workers.
+
     def add_workers(self, new_workers ):
         self.workers.append(new_workers)
+
+# this line of codes execute similar actions as the above code appending self.bio which is adding worker's biography.
     def add_bio(self, staff_bio):
         self.bio_worker.append(staff_bio)
 
-    def display_workers(self):
+# in the line below we are displaying workers information and salary.
+
+    def display_workers(self):     # we are displaying workers
         print('                        ')
         print(' Meet our staff:')
         print('-----------------')
@@ -19,9 +26,15 @@ class organization:
             print(i.fname, i.lname, i.position)
             print(f'weekly Salary : ${i.weekly_pay():.2f}')
 
+
+
             print('                         ')
+
         print ('Staff Biography')
         print('----------------')
+
+
+# displaying worker' s biography.
 
         for o in self.bio_worker:
             print(o.ffname)
@@ -33,7 +46,7 @@ class organization:
             print('<<<<<>>>>>')
 
 
-
+# here is the main code below.
 def main():
     main_office = organization()
 
@@ -51,6 +64,9 @@ def main():
     main_office.add_bio(CFO_bio)
     Operation_dir = Staff( 'Emaye', 'Lishan','  / Operation Director', 80)
     Operation_bio = bio('Emaye Lishan',67, 'Black', 'Female', 'Ethiopian')
+
+# this will execute the commands.
+
     main_office.add_workers(Operation_dir)
     main_office.add_bio(Operation_bio)
     print(main_office.display_workers())
